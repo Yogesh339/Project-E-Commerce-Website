@@ -8,11 +8,9 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseClass {
     WebDriver driver;
-
     @BeforeMethod
 
     public void inItBrowser() {
-
 
         WebDriverManager.chromedriver().setup();
         // 1. Open Chrome Browser
@@ -26,6 +24,6 @@ public class BaseClass {
 
     @AfterMethod
     public void exitBrowser() {
-        driver.close();
+        driver.quit();
     }
 }
